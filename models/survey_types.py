@@ -28,7 +28,6 @@ class SurveyType(db.Model, Serializer):
 
 
 class SurveyTypeAPI(MethodView):
-    #TODO: Error handling for all queries (if not found)
     def get(self, id):
         if id is None:
             surveyTypes = SurveyType.query.all()

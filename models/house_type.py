@@ -28,7 +28,6 @@ class HouseType(db.Model, Serializer):
 
 
 class HouseTypeAPI(MethodView):
-    #TODO: Error handling for all queries (if not found)
     def get(self, id):
         if id is None:
             houseTypes = HouseType.query.all()

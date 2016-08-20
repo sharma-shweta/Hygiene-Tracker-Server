@@ -37,7 +37,6 @@ class ClientClass(db.Model, Serializer):
 
 
 class ClientClassAPI(MethodView):
-    #TODO: Error handling for all queries (if not found)
     def get(self, id):
         if id is None:
             clientClass = ClientClass.query.all()

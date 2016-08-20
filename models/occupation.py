@@ -19,7 +19,6 @@ class Occupation(db.Model, Serializer):
 
     def __repr__(self):
         return {"Occupation": self.name}
-        #return "{"Occupation": %s}" % self.name
 
     def __unicode__(self):
         return self.name

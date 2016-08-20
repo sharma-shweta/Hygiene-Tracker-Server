@@ -13,14 +13,8 @@ db.init_app(app)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
 
-from models.server_models import Organization, Role, User, \
-    Occupation, HouseType, SurveyAnswer, SurveyQuestionnaire, SurveyQCategory, \
-    ClientDetails, ClientRegister, ClientResponse, SurveyType, ClientClassType, \
-    ClientClass, ClientResponseSummary
-from models.admin_models import OrganizationAdmin, RoleAdmin, UserAdmin, \
-    OccupationAdmin, HouseTypeAdmin, SurveyQCategoryAdmin, SurveyQuestionnaireAdmin, \
-    SurveyAnswerAdmin, ClientRegisterAdmin, ClientDetailsAdmin, ClientResponseAdmin, \
-    ClientClassAdmin, ClientClassTypeAdmin, SurveyTypeAdmin, ClientResponseSummaryAdmin
+from models.server_models import *
+from models.admin_models import *
 from server_utils.HTTP_status_returns import __OK__, __NOT_FOUND__
 
 from models.occupation import occupation_blueprint
